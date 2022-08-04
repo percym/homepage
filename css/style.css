@@ -1,0 +1,102 @@
+/* Apply below style to al elements */
+*{
+    font-family: Raleway, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* avoids the box model issue make sure provided width does not get streched if you add padding and margin*/
+    outline: none;
+    border: none;
+    text-decoration: none; /* removes underline form anchor tag */
+    text-transform: capitalize; /* make first letter to be capital*/
+    overflow: hidden; /*clip off extra text going out of the box*/
+    scroll-behavior: smooth; /*when scrolling happens it have smooth effect*/
+}
+
+header{
+    position: fixed; /*make the menu fixed if scrolling down the page */
+    top:0px;
+    left: 0px;
+    right: 0px;
+    /* background: rgb(64,160,64); */
+    height:64px;
+    z-index: 100; /*header shouls always be raised*/
+
+}
+.header .nav-bar{
+    display: flex;/* making it flex will help move items in it easier */
+
+}
+
+.header .nav-bar a{
+    flex:1; /* every anchor tag takes equal space */
+    text-align: center; /*alaign all text horizontaly centered*/
+    font-size: 22px;
+    line-height: 65px; /* space between two lines also helps to alaign elements verticaly center*/
+    color: aliceblue;
+
+}
+
+/* apply sudo selector hover reduce brightness */
+.header .nav-bar a:hover{
+    filter:brightness(0.8)
+}
+
+/* apply different background color om each anchor item */
+.header .nav-bar a:nth-child(1){
+    background: #db1616;
+}
+.header .nav-bar a:nth-child(2){
+    background: #16db78;
+}
+.header .nav-bar a:nth-child(3){
+    background: #6013a8;
+}
+.header .nav-bar a:nth-child(4){
+    background: #d35913;
+}
+.header .nav-bar a:nth-child(5){
+    background: #14ccec;
+}
+/* style main body section */
+.container{
+    display: flex;
+    width: 500%;
+    height: 100vh;/* ocuppy visible screen height*/
+}
+
+.container .main-section{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-items: center; /*alaigns the contents vertically center*/
+    justify-content: center;  /*alaigns the contents horizontaly center*/
+    font-size: 8vw;/*8 of the totak view width */
+    letter-spacing: 0.5rem; /* space between letter in a word */
+    text-transform: uppercase;
+    font-weight: bold;
+    color: azure;
+}
+
+.container .main-section:nth-child(1){
+    background: #db1616;
+}
+.container .main-section:nth-child(2){
+    background: #16db78;
+}
+.container .main-section:nth-child(3){
+    background: #6013a8;
+}
+.container .main-section:nth-child(4){
+    background: #d35913;
+}
+.container .main-section:nth-child(5){
+    background: #14ccec;
+}
+
+/* apply media query fpr diff screen sizes to make it responsive*/
+
+@media (max-width:750px) {
+    .header .nav-bar a spLookupan{
+        display: none; /* hide menu text and only show icon */
+    }
+}
